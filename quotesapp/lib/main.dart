@@ -20,6 +20,31 @@ class _QuotesState extends State<Quotes> {
     Quote(text: 'The Earth is round', author: 'John'),
   ];
 
+  Widget quoteTemplate(quote){
+    return Card(
+      margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
+      child: Column(
+        children: [
+          Text(
+            quote.text,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.grey[600],
+            ),
+          ),
+          SizedBox(height: 6),
+          Text(
+            quote.author,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.grey[800]
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +53,11 @@ class _QuotesState extends State<Quotes> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Column(
-        children: quotes.map((e) => Text('${e.text} - ${e.author}')).toList(),
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: quotes.map((e) => quoteTemplate(e)).toList(),
+        ),
       ),
     );
   }
