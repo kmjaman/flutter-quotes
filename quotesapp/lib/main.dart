@@ -12,6 +12,13 @@ class Quotes extends StatefulWidget {
 }
 
 class _QuotesState extends State<Quotes> {
+
+  List quotes = [
+    'The sky is blue',
+    'The Sun rises in the west',
+    'The Earth is round'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +26,9 @@ class _QuotesState extends State<Quotes> {
         title: Text('Quetos App'),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
+      ),
+      body: Column(
+        children: quotes.map((e) => Text(e)).toList(),
       ),
     );
   }
