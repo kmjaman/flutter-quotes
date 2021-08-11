@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(MaterialApp(
   home: Quotes(),
@@ -14,21 +15,21 @@ class Quotes extends StatefulWidget {
 class _QuotesState extends State<Quotes> {
 
   List quotes = [
-    'The sky is blue',
-    'The Sun rises in the west',
-    'The Earth is round'
+    Quote(text: 'The sky is blue', author: 'Neil'),
+    Quote(text: 'The Sun rises in the west', author: 'Tom'),
+    Quote(text: 'The Earth is round', author: 'John'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quetos App'),
+        title: Text('Quotes App'),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((e) => Text(e)).toList(),
+        children: quotes.map((e) => Text('${e.text} - ${e.author}')).toList(),
       ),
     );
   }
