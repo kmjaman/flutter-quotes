@@ -32,7 +32,7 @@ class _QuotesState extends State<Quotes> {
               color: Colors.grey[600],
             ),
           ),
-          SizedBox(height: 6),
+          SizedBox(height: 20),
           Text(
             quote.author,
             style: TextStyle(
@@ -40,6 +40,8 @@ class _QuotesState extends State<Quotes> {
               color: Colors.grey[800]
             ),
           ),
+          SizedBox(height: 8),
+          TextButton.icon(onPressed: (){}, icon: Icon(Icons.delete), label: Text('Delete'),)
         ],
       ),
     );
@@ -54,8 +56,10 @@ class _QuotesState extends State<Quotes> {
         backgroundColor: Colors.redAccent,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: quotes.map((e) => quoteTemplate(e)).toList(),
         ),
       ),
