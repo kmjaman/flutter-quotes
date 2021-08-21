@@ -15,9 +15,12 @@ class Quotes extends StatefulWidget {
 class _QuotesState extends State<Quotes> {
 
   List quotes = [
-    Quote(text: 'The sky is blue', author: 'Neil'),
-    Quote(text: 'The Sun rises in the west', author: 'Tom'),
-    Quote(text: 'The Earth is round', author: 'John'),
+    Quote(text: 'The sky is blue.', author: 'Neil'),
+    Quote(text: 'The Sun rises in the west.', author: 'Tom'),
+    Quote(text: 'The Earth is round.', author: 'John'),
+    Quote(text: 'Time and tide wait for none.', author: 'Proverb'),
+    Quote(text: 'Strike the irn while it is hot.', author: 'Proverb'),
+    Quote(text: 'Honesty is a great virtue.', author: 'Proverb'),
   ];
 
   Widget quoteTemplate(quote){
