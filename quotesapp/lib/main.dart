@@ -15,12 +15,12 @@ class Quotes extends StatefulWidget {
 class _QuotesState extends State<Quotes> {
 
   List quotes = [
-    Quote(text: 'The sky is blue.', author: 'Neil'),
-    Quote(text: 'The Sun rises in the west.', author: 'Tom'),
-    Quote(text: 'The Earth is round.', author: 'John'),
-    Quote(text: 'Time and tide wait for none.', author: 'Proverb'),
-    Quote(text: 'Strike the irn while it is hot.', author: 'Proverb'),
-    Quote(text: 'Honesty is a great virtue.', author: 'Proverb'),
+    Quote(text: 'All our dreams can come true, if we have the courage to pursue them.', author: 'Walt Disney'),
+    Quote(text: 'The secret of getting ahead is getting started.', author: 'Mark Twain'),
+    Quote(text: 'It’s hard to beat a person who never gives up.', author: 'Babe Ruth'),
+    Quote(text: 'I wake up every morning and think to myself, ‘how far can I push this company in the next 24 hours.', author: 'Leah Busque'),
+    Quote(text: 'If people are doubting how far you can go, go so far that you can’t hear them anymore.', author: 'Michele Ruiz'),
+    Quote(text: 'Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.', author: 'Joss Whedon'),
   ];
 
   Widget quoteTemplate(quote){
